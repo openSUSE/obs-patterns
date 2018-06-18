@@ -1,0 +1,4 @@
+# Build settings
+markdown: kramdown
+# theme: minima
+permalink: :categories/:title:output_ext
