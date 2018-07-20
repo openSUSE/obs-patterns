@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Card"
+category: components
+description: The main layout feature we use. 99% of all content is in a card.
+---
+
+.card
+  .card-header.d-flex.justify-content-between
+    %h5
+      News
+    .float-right
+      %a{href: '/main/news.rss', title: 'RSS Feed'}
+        %i.fa.fa-rss
+  .card-body
+    The news are bad news!
