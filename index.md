@@ -11,6 +11,12 @@ layout: default
 </p>
 
 
-## How to add a new pattern
+## How to Contribute (Add/Edit Patterns)
 
-Just add the haml code for a new pattern to `posts/$category/$date-$name.html`
+1. Fork the project on [GitHub](https://github.com/openSUSE/obs-patterns)
+2. Add/edit patterns under
+  [_posts](https://github.com/openSUSE/obs-patterns/tree/master/_posts).
+  Patterns are grouped by categories (a category being a directory under
+  `_posts`). Each pattern is a file under `_posts/$some_category/` (with the
+  filename being `$date-$pattern_name.html`)
+3. Submit a pull request
