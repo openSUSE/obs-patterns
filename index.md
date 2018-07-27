@@ -19,4 +19,6 @@ layout: default
   Patterns are grouped by categories (a category being a directory under
   `_posts`). Each pattern is a file under `_posts/$some_category/` (with the
   filename being `$date-$pattern_name.html`)
-3. Submit a pull request
+3. Test your changes locally with Docker Compose by running `docker-compose up`
+  and accessing <http://localhost:4000/>
+4. Submit a pull request
