@@ -2,11 +2,12 @@
     <div class="sidebar-sticky">
       <ul class="nav flex-column">
         {% for category in site.categories %}
+          {% assign category_name = category | first %}
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>{{category|first}}</span>
+            <span>{{ category_name }}</span>
           </h6>
-          {% assign category_name = category|first %}
-          {% for post in site.categories[category_name] %}
+          {% assign sorted_posts = category[1] | sort: 'title' %}
+          {% for post in sorted_posts %}
             <li class="nav-item">
               <a class="nav-link active" href="{{ post.url | relative_url }}">
                 <span data-feather="home"></span>
