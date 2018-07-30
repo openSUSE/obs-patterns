@@ -1,0 +1,73 @@
+---
+layout: post
+title:  "List of items"
+category: components
+description: For having a list of items with an icon on the left side.
+             If this is integrated in body of a card, then add `list-group-item-integrated.border-left-0.border-right-0`
+             classes for removing duplicate borders of the `list-group-item` elements
+---
+
+%p
+%p
+.h4 Simple list with icons on the left
+.row
+  .col-3
+    .list-group
+      .list-group-item
+        .row
+          .col-2.pl-2.text-center
+            %i.fa.fa-cubes.fa-2x.text-info.pt-2{title: 'Icon title 1'}
+          .col-10.pl-0
+            %a{href: "http://example.com"} Example Link 1
+            %p.small.mb-0
+              Second line of text for item 1
+      .list-group-item
+        .row
+          .col-2.pl-2.text-center
+            %i.fa.fa-archive.fa-2x.text-warning.pt-2{title: 'Icon title 2'}
+          .col-10.pl-0
+            %a{href: "http://example.com"} Example Link 2
+            %p.small.mb-0
+              Second line of text for item 2
+      .list-group-item
+        .row
+          .col-2.pl-2.text-center
+            %i.fa.fa-code-branch.fa-2x.text-success.pt-2{title: 'Icon title 3'}
+          .col-10.pl-0
+            %a{href: "http://example.com"} Example Link 3
+            %p.small.mb-0
+              Second line of text for item 3
+%p
+%p
+.h4 List integrated inside a card
+
+.row
+  .col-3
+    .card
+      .card-header
+        List inside a card
+      .list-group
+        .list-group-item.list-group-item-integrated.border-left-0.border-right-0
+          .row
+            .col-2.pl-2.text-center
+              %i.fa.fa-cubes.fa-2x.text-info.pt-2{title: 'Icon title 1'}
+            .col-10.pl-0
+              %a{href: "http://example.com"} Example Link 1
+              %p.small.mb-0
+                Second line of text for item 1
+        .list-group-item.list-group-item-integrated.border-left-0.border-right-0
+          .row
+            .col-2.pl-2.text-center
+              %i.fa.fa-archive.fa-2x.text-warning.pt-2{title: 'Icon title 2'}
+            .col-10.pl-0
+              %a{href: "http://example.com"} Example Link 2
+              %p.small.mb-0
+                Second line of text for item 2
+        .list-group-item.list-group-item-integrated.border-left-0.border-right-0
+          .row
+            .col-2.pl-2.text-center
+              %i.fa.fa-code-branch.fa-2x.text-success.pt-2{title: 'Icon title 3'}
+            .col-10.pl-0
+              %a{href: "http://example.com"} Example Link 3
+              %p.small.mb-0
+                Second line of text for item 3
