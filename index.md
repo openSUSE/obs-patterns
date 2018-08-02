@@ -22,3 +22,9 @@ layout: default
 3. Test your changes locally with Docker Compose by running `docker-compose up`
   and accessing <http://localhost:4000/>
 4. Submit a pull request
+
+## Deployments
+
+Deployments are automated with a webhook, so whenever commits are pushed to
+`master`, a new version will be published. The deployments are listed
+[here](https://app.netlify.com/sites/obs-patterns/deploys).
