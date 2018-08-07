@@ -1,0 +1,21 @@
+---
+layout: post
+title:  Tabs
+category: components
+description: The tabs need a container (which is a **%div** in the example). Javascript code in OBS makes the tabs responsive.
+---
+
+%div
+  %ul.nav.nav-tabs.pt-2.px-3.flex-nowrap.collapsible{ 'role': 'tablist' }
+    %li.nav-item
+      %a.nav-link{ href: 'example1.com', class: [current_page?('example1.com') && 'active'] }
+        Tab 1
+    %li.nav-item
+      %a.nav-link{ href: 'example2.com', class: [current_page?('example2.com') && 'active'] }
+        Tab 2
+    %li.nav-item
+      %a.nav-link{ href: 'example3.com', class: [current_page?('example3.com') && 'active'] }
+        Tab 3
+    %li.nav-item.dropdown
+      %a.nav-link.dropdown-toggle{ href: '#', 'data-toggle': 'dropdown', 'role': 'button', 'aria-expanded': 'false', 'aria-haspopup': 'true' }
+      .dropdown-menu.dropdown-menu-right
