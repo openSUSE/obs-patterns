@@ -3,19 +3,17 @@ layout: post
 title:  Tabs
 category: components
 description: The tabs need a container (which is a **%div** in the example). Javascript code in OBS makes the tabs responsive.
+             The **tab_link** `helper` creates a link and marks the active tab depending on the current page.
 ---
 
 %div
   %ul.nav.nav-tabs.pt-2.px-3.flex-nowrap.collapsible{ 'role': 'tablist' }
     %li.nav-item
-      %a.nav-link{ href: 'example1.com', class: [current_page?('example1.com') && 'active'] }
-        Tab 1
+      = tab_link('Tab 1', 'example1.com')
     %li.nav-item
-      %a.nav-link{ href: 'example2.com', class: [current_page?('example2.com') && 'active'] }
-        Tab 2
+      = tab_link('Tab 2', 'example2.com')
     %li.nav-item
-      %a.nav-link{ href: 'example3.com', class: [current_page?('example3.com') && 'active'] }
-        Tab 3
+      = tab_link('Tab 3', 'example3.com')
     %li.nav-item.dropdown
       %a.nav-link.dropdown-toggle{ href: '#', 'data-toggle': 'dropdown', 'role': 'button', 'aria-expanded': 'false', 'aria-haspopup': 'true' }
       .dropdown-menu.dropdown-menu-right
