@@ -1,0 +1,28 @@
+---
+layout: post
+title:  Table
+category: components
+description: A `%div` container with the CSS class `.table-responsive` makes the table responsive. The width of columns can be adjusted by using the classes `col-*` from
+             [Bootstrap's grid system](https://getbootstrap.com/docs/4.1/layout/grid/#responsive-classes) on the `%th` tags.
+---
+
+.table-responsive
+  %table.table.table-hover
+    %thead.thead-light
+      %tr
+        %th.col-2{ scope: 'col' } Narrow Column
+        %th.col-6{ scope: 'col' } Wide Column
+        %th{ scope: 'col' } Column
+    %tbody
+      %tr
+        %td openSUSE
+        %td Leap
+        %td Tumbleweed
+      %tr
+        %td Kiwi
+        %td openQA
+        %td OBS
+      %tr
+        %td Linux
+        %td Open Source
+        %td YaST
