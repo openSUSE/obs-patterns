@@ -1,0 +1,28 @@
+---
+layout: post
+title:  Modal Confirm
+category: components
+description: To replace data-confirm dialogs and use our styled modal ones use this component. This is typically used for **link_to** that send (sometimes via Ajax) actions 
+             to the server that are destroying some data.
+---
+
+%h5 Trigger element
+
+%a{ href: "#", data: { toggle: "modal", target: "#confirm-modal-1234" }, title: "Delete a thing" }
+    %i.fas.fa-times-circle.text-danger
+    Delete
+
+.modal.fade{ id: "confirm-modal-1234", tabindex: -1, role: 'dialog', aria: { labelledby: 'confirm-modal-label', hidden: true } }
+    .modal-dialog.modal-dialog-centered{ role: 'document' }
+        .modal-content
+            .modal-header
+                %h5.modal-title
+                    Do you really want to delete a thing?
+            .modal-body
+                %p Please confirm that you want to delete a thing
+                //= form_tag(some_path(thing), method: :post) do
+                .modal-footer
+                    %button.btn.btn-sm.btn-outline-secondary.px-4{ data: { dismiss: 'modal' } }
+                        Cancel
+                    //= submit_tag('Delete', class: 'btn btn-sm btn-danger px-4')
+                    %input.btn.btn-sm.btn-danger.px-4{ type: "submit", name: "commit", value: "Delete", data: { disable: { with: "Delete" } } }
