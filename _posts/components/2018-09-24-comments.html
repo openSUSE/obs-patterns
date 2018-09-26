@@ -1,0 +1,45 @@
+---
+layout: post
+title:  Comments
+category: components
+description: The comments section for a `Commentable` model.
+---
+
+%h5 Display a comment
+
+.media
+  %img.mr-3{ alt: 'OBS Instance Superuser', height: '35', src: 'https://www.gravatar.com/avatar/b1a4b2518dbbdd47dd4a713d5cd1df94?s=35&d=wavatar', width: '35' }
+  .media-body
+    %p
+      %a{ href: '/user/show/Admin' } Admin
+      wrote
+      %u{ title: '2018-09-24 14:21 UTC' }
+        less than a minute ago
+    %p My comment is amazing!
+    %ul.list-inline
+      %li.list-inline-item.togglable_comment{ 'data-toggle': "reply_form_of_1" }
+        %span.btn.btn-sm.btn-outline-secondary{ id: 'reply_link_id_1' }
+          Reply
+      %li.list-inline-item
+        .modal.fade{ id: 'delete-comment-modal-1', role: 'dialog', tabindex: '-1', aria: { hidden: 'true', labelledby: 'delete-comment-modal-label' } }
+          .modal-dialog.modal-dialog-centered{ role: 'document' }
+            .modal-content
+              .modal-header
+                %h5.modal-title
+                  Delete comment?
+              .modal-body
+                %p Please confirm deletion of comment
+                %form{ action: '/comments/1', 'accept-charset': 'UTF-8', 'data-remote': 'true', method: 'post' }
+                  .modal-footer
+                    %button.btn.btn-sm.btn-outline-secondary.px-4{ 'data-dismiss': 'modal' }
+                      Cancel
+                    %input.btn.btn-sm.btn-danger.px-4{ name: 'commit', value: 'Delete', 'data-disable-with': 'Delete', type: 'submit' }
+        %a.delete_link.btn.btn-sm.btn-outline-danger{ href: '#', title: 'Delete comment', data: { toggle: 'modal', target: '#delete-comment-modal-1' } }
+          Delete
+
+%h5.mt-3 Reply to a comment / New comment
+
+.comment_new#reply_form_of_1
+  %form.new_comment#new_comment{ action: '/comments', 'accept-charset': 'UTF-8', 'data-remote': 'true', method: 'post' }
+    %textarea#reply_body_1.form-control{name: "comment[body]", onclick: "sz(this);", onkeyup: "sz(this);", placeholder: "Comment Text", required: "required", row: "4"}
+    %input.btn.btn-outline-primary.my-2{ name: 'commit', value: 'Add reply', id: 'add_reply_1', 'data-disable-with': 'Add reply', type: 'submit' }
