@@ -1,0 +1,21 @@
+---
+layout: post
+title:  Forms
+category: components
+description: We are using [Bootstrap custom forms](http://getbootstrap.com/docs/4.1/components/forms/#custom-forms)
+---
+
+.custom-control.custom-checkbox
+  %input.custom-control-input#my-checkbox{ type: 'checkbox' }
+  %label.custom-control-label{ for: 'my-checkbox' } I am a checkbox
+.custom-control.custom-radio
+  %input.custom-control-input#my-radio{ type: 'radio' }
+  %label.custom-control-label{ for: 'my-radio' } I am a radio element
+%select.custom-select#my-select
+  %option{ selected: 'selected' } Open this select menu
+  %option{ value: '1' } One
+  %option{ value: '2' } Two
+  %option{ value: '3' } Three
+.custom-file
+  %input.custom-file-input#my-file{ type: 'file' }
+  %label.custom-file-label{ for: 'customFile' } Choose file
