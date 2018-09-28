@@ -1,0 +1,33 @@
+---
+layout: post
+title: Buttons
+category: components
+description: We are using [Bootstrap custom buttons](https://getbootstrap.com/docs/4.1/components/buttons/). We use only a subset of what they offer to not have buttons with multiple tones of a color.
+---
+
+%h5 Buttons with solid background
+
+%button.btn.btn-primary{ type: 'button' } Primary
+%button.btn.btn-secondary{ type: 'button' } Secondary
+%button.btn.btn-danger{ type: 'button' } Danger
+%button.btn.btn-warning{ type: 'button' } Warning
+
+%h5 Buttons with outline
+
+%button.btn.btn-outline-primary{ type: 'button' } Primary
+%button.btn.btn-outline-secondary{ type: 'button' } Secondary
+%button.btn.btn-outline-danger{ type: 'button' } Danger
+%button.btn.btn-outline-warning{ type: 'button' } Warning
+
+%h5 Button Position
+
+%p To draw the attention on the default button, it needs to use the button with solid background. All secondary buttons have the outline only.
+
+`Destructive action`:
+%button.btn.btn-outline-secondary{ type: 'button' } Cancel
+%button.btn.btn-danger{ type: 'button' } Delete
+%br
+%br
+`Confirm action`:
+%button.btn.btn-outline-secondary{ type: 'button' } Cancel
+%button.btn.btn-primary{ type: 'button' } Accept

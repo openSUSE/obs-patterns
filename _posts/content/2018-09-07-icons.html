@@ -1,0 +1,197 @@
+---
+layout: post
+title: Icons
+category: content
+description: We are using [FontAwesome icons](https://fontawesome.com/icons) with [Bootstrap colors](http://getbootstrap.com/docs/4.1/utilities/colors/).
+             Icons can be used with text or title, depending on your use case. They can be [animated](https://fontawesome.com/how-to-use/on-the-web/styling/animating-icons),
+             [rotated](https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons), [stacked](https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons)
+             and [more](https://fontawesome.com/how-to-use/on-the-web/styling/).
+---
+
+`Add`:
+%i.fas.fa-plus-circle.text-primary
+Add
+\/
+%i.fas.fa-plus-circle.text-primary{ title: 'Add' }
+*(inline, e.g. in a table)*
+%br
+
+`Announcement`:
+%i.fa.fa-exclamation-circle.text-danger{ title: 'Alert' }
+\/
+%i.fa.fa-exclamation-triangle.text-warning{ title: 'Warning' }
+\/
+%i.fa.fa-check-circle.text-primary{ title: 'Success' }
+\/
+%i.fa.fa-info-circle.text-secondary{ title: 'Info' }
+%br
+
+`Branch`:
+%i.fas.fa-code-branch.text-primary
+Branch package
+%br
+
+`Browse`:
+%i.fas.fa-folder-open.text-warning
+Browse source
+%br
+
+`Build Status`:
+%i.fas.fa-lock{ title: 'Blocked' }
+\/
+%i.far.fa-calendar-alt{ title: 'Scheduling' }
+\/
+%i.fas.fa-cog{ title: 'Building' }
+\/
+%i.fas.fa-check{ title: 'Finished' }
+\/
+%i.fas.fa-exclamation-triangle{ title: 'Broken' }
+\/
+%i.fas.fa-dolly-flatbed{ title: 'Publishing' }
+\/
+%i.fas.fa-truck{ title: 'Published' }
+\/
+%br
+
+`Cloud Download`:
+%i.fas.fa-cloud-download-alt.text-secondary
+Cloud Download
+%br
+
+`Cloud Upload`:
+%i.fas.fa-cloud-upload-alt.text-secondary
+Cloud Upload
+%br
+
+`Configuration`:
+%i.fas.fa-cogs
+Configuration
+%br
+
+`Delete`:
+%i.fas.fa-times-circle.text-danger
+Delete
+\/
+%i.fas.fa-times-circle.text-danger{ title: 'Delete' }
+*(inline, e.g. in a table)*
+%br
+
+`Disable`:
+%i.fas.fa-toggle-off{ title: 'Disable' }
+%br
+
+`Download`:
+%i.fas.fa-download.text-secondary
+Download
+\/
+%i.fas.fa-download.text-secondary{ title: 'Download' }
+*(inline, e.g. in a table)*
+%br
+
+`Edit`:
+%i.fas.fa-edit.text-secondary
+Edit
+\/
+%i.fas.fa-edit.text-secondary{ title: 'Edit' }
+*(inline, e.g. in a table)*
+%br
+
+`Email`:
+%i.far.fa-envelope{ title: 'Send email to blabla' }
+%br
+
+`Enable`:
+%i.fas.fa-toggle-on{ title: 'Enable' }
+%br
+
+`Files`:
+%i.fas.fa-copy.text-gray-550
+Files
+%br
+
+`Home`:
+%i.fas.fa-home{ title: 'Home' }
+%br
+
+`Image`:
+%i.fas.fa-compact-disc.text-secondary
+Image
+%br
+
+`List`:
+%i.fas.fa-list{ title: 'List projects' }
+%br
+
+`Monitor`:
+%i.fas.fa-heartbeat.text-danger{ title: 'Monitor' }
+%br
+
+`Package`:
+%i.fa.fa-archive.text-warning
+My package 123
+%br
+
+`Project`:
+%i.fa.fa-cubes.text-secondary
+My project 123
+%br
+
+`Refresh`:
+%i.fas.fa-sync-alt.rotate-on-click{ title: 'Refresh' }
+*(rotates on click)*
+:javascript
+  // Example to show how this can be achieved
+  $('i.rotate-on-click').click(function() {
+    element = $(this);
+    element.addClass('fa-spin');
+    // Sleep for 1.5 second... this would be your AJAX call or whatever needs to be done in the refresh
+    setTimeout(function() {
+      element.removeClass('fa-spin');
+    }, 1500);
+  });
+%br
+
+`RSS Feed`:
+%i.fa.fa-rss
+%br
+
+`Search`:
+%i.fas.fa-search
+%br
+
+`Show`:
+%span.fa-stack.half-font-size{ title: 'Show' }
+  %i.far.fa-file.fa-stack-2x
+  %i.fas.fa-search.fa-stack-1x
+%br
+
+`Spinner`:
+%i.fas.fa-search.load-on-click
+%i.fas.fa-spinner.fa-spin.d-none
+*(loads on click)*
+:javascript
+  // Example to show how this can be achieved
+  $('i.load-on-click').click(function() {
+    element = $(this);
+    element.addClass('d-none');
+    element.next('i.fas.fa-spin').removeClass('d-none');
+    // Sleep for 1.5 second... this would be your AJAX call or whatever needs to be done
+    setTimeout(function() {
+      element.removeClass('d-none');
+      element.next('i.fas.fa-spin').addClass('d-none');
+    }, 1500);
+  });
+\/
+%i.fas.fa-spinner.fa-spin
+*(Visually indicate that the WebUI is waiting for an update from the backend)*
+%br
+
+`Submit`:
+%i.fas.fa-share-square.text-warning
+Submit package
+%br
+
+`Upload`:
+%i.fas.fa-upload.text-secondary
+Upload
+%br
