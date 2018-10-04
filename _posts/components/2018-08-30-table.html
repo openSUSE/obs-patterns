@@ -1,28 +1,60 @@
 ---
 layout: post
-title:  Table
+title: Table
 category: components
-description: A `%div` container with the CSS class `.table-responsive` makes the table responsive. The width of columns can be adjusted by using the classes `col-*` from
-             [Bootstrap's grid system](https://getbootstrap.com/docs/4.1/layout/grid/#responsive-classes) on the `%th` tags.
+description: A `%div` container with the CSS class `.table-responsive` makes the table responsive. The width of columns can be adjusted by using the
+             [Bootstrap's sizing classes](https://getbootstrap.com/docs/4.1/utilities/sizing/) on the `%th` tags
+             ([Bootstrap's grid system](https://getbootstrap.com/docs/4.1/layout/grid/) doesn't work for tables in Chrome).
+             Additionally, we are using [DataTable](https://datatables.net/examples/styling/bootstrap4)'s [responsive](https://datatables.net/extensions/responsive/)
+             and style them with striped rows (`.table-striped`) and borders (`.table-bordered`). However, you can use tables with and without datatables.
 ---
 
+%h5 Table
+
 .table-responsive
-  %table.table.table-hover
-    %thead.thead-light
+  %table.table.table-striped.table-bordered#my-table
+    %thead
       %tr
-        %th.col-2{ scope: 'col' } Narrow Column
-        %th.col-6{ scope: 'col' } Wide Column
-        %th{ scope: 'col' } Column
+        %th.w-25 Narrow
+        %th.w-50 Wide
+        %th Other
     %tbody
       %tr
-        %td openSUSE
-        %td Leap
-        %td Tumbleweed
+        %td Oranges
+        %td Bananas
+        %td Kiwis
       %tr
-        %td Kiwi
-        %td openQA
-        %td OBS
+        %td Spain
+        %td Brazil
+        %td Germany
       %tr
-        %td Linux
-        %td Open Source
-        %td YaST
+        %td Fruits Are Us
+        %td Fruits & Vegetables Inc.
+        %td SUSE Fruit Company Ltd.
+
+%h5 Table with DataTable
+
+%table.responsive.table.table-striped.table-bordered#my-datatable
+  %thead
+    %tr
+      %th Fruits
+      %th Origin
+      %th Vendor
+  %tbody
+    %tr
+      %td Oranges
+      %td Bananas
+      %td Kiwis
+    %tr
+      %td Spain
+      %td Brazil
+      %td Germany
+    %tr
+      %td Fruits Are Us
+      %td Fruits & Vegetables Inc.
+      %td SUSE Fruit Company Ltd.
+
+:javascript
+  $('#my-datatable').DataTable({
+    responsive: true
+  });
