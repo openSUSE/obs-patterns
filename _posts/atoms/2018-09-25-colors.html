@@ -2,19 +2,33 @@
 layout: post
 title: Colors
 category: atoms
-description: We are using [Bootstrap classes for colors](http://getbootstrap.com/docs/4.1/utilities/colors/). We use only a subset of what they offer to not have multiple tones of a color.
+description: We are using [Bootstrap classes for colors](http://getbootstrap.com/docs/4.1/utilities/colors/) and in rare occasions,
+             the [Bootstrap classes from the Alert component](https://getbootstrap.com/docs/4.1/components/alerts/) whenever the content
+             is purely informative and should not be the center of attention. We use only a subset of what they offer to not have multiple tones of a color.
 ---
 
 %ul.colors.d-flex.flex-wrap.list-unstyled.m-0.p-0
   %li.border.mr-1.mb-1
     .color.text-center.bg-primary .bg-primary
+    .color.text-center.alert-primary .alert-primary
     %p.m-0.text-center.text-primary .text-primary
   %li.border.mr-1.mb-1
     .color.text-center.bg-secondary .bg-secondary
+    .color.text-center.alert-secondary .alert-secondary
     %p.m-0.text-center.text-secondary .text-secondary
   %li.border.mr-1.mb-1
     .color.text-center.bg-danger .bg-danger
+    .color.text-center.alert-danger .alert-danger
     %p.m-0.text-center.text-danger .text-danger
   %li.border.mr-1.mb-1
     .color.text-center.bg-warning .bg-warning
+    .color.text-center.alert-warning .alert-warning
     %p.m-0.text-center.text-warning .text-warning
+  %li.border.mr-1.mb-1
+    .color.text-center.bg-dark.text-light .bg-dark
+    .color.text-center.alert-dark .alert-dark
+    %p.m-0.text-center.text-dark .text-dark
+  %li.border.mr-1.mb-1
+    .color.text-center.bg-light .bg-light
+    .color.text-center.alert-light .alert-light
+    %p.m-0.text-center.bg-dark.text-light .text-light
