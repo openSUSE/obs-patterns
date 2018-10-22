@@ -122,25 +122,6 @@ body {
   h2, h4 { margin: 1rem 0; }
   .half-font-size { font-size: 0.5rem; }
 
-  // TODO: Override the Bootstrap defaults (for now, we simply override the default Bootstrap classes as it involves a lot of changes for a Jekyll application)
-  $primary: #693;
-  $secondary: #069;
-  $warning: #f0ad4e;
-
-  // TODO: Missing btn-primary, btn-outline-primary (+ :hover for both)
-  .text-primary { color: $primary !important; }
-  .bg-primary { background-color: $primary !important; }
-
-  .text-secondary { color: $secondary !important; }
-  .bg-secondary { background-color: $secondary !important; }
-
-  .text-warning { color: $warning !important; }
-  .bg-warning { background-color: $warning !important; }
-
-  /*
-   * Colors page
-   */
-
   ul.colors {
     & li {
       flex: auto;
