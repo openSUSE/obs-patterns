@@ -5,8 +5,10 @@ category: atoms
 description: A `%div` container with the CSS class `.table-responsive` makes the table responsive. The width of columns can be adjusted by using the
              [Bootstrap's sizing classes](https://getbootstrap.com/docs/4.1/utilities/sizing/) on the `%th` tags
              ([Bootstrap's grid system](https://getbootstrap.com/docs/4.1/layout/grid/) doesn't work for tables in Chrome).
-             Additionally, we are using [DataTable](https://datatables.net/examples/styling/bootstrap4)'s [responsive](https://datatables.net/extensions/responsive/)
-             and style them with striped rows (`.table-striped`) and borders (`.table-bordered`). However, you can use tables with and without datatables.
+             Additionally, you can also use [DataTable](https://datatables.net/examples/styling/bootstrap4)'.
+             Style it with striped rows (`.table-striped`) and borders (`.table-bordered`).
+             Do not forget to initialize it with `initializeDataTable()` and to wrap it inside the class `.obs-dataTable`,
+             as this is solving a [bug related to the search field not being resposive](https://github.com/mkhairi/jquery-datatables/issues/14).
 ---
 
 %h5 Table
@@ -34,27 +36,26 @@ description: A `%div` container with the CSS class `.table-responsive` makes the
 
 %h5 Table with DataTable
 
-%table.responsive.table.table-striped.table-bordered#my-datatable
-  %thead
-    %tr
-      %th Fruits
-      %th Origin
-      %th Vendor
-  %tbody
-    %tr
-      %td Oranges
-      %td Bananas
-      %td Kiwis
-    %tr
-      %td Spain
-      %td Brazil
-      %td Germany
-    %tr
-      %td Fruits Are Us
-      %td Fruits & Vegetables Inc.
-      %td SUSE Fruit Company Ltd.
+.obs-dataTable
+  %table.table.table-striped.table-bordered#my-datatable
+    %thead
+      %tr
+        %th Fruits
+        %th Origin
+        %th Vendor
+    %tbody
+      %tr
+        %td Oranges
+        %td Bananas
+        %td Kiwis
+      %tr
+        %td Spain
+        %td Brazil
+        %td Germany
+      %tr
+        %td Fruits Are Us
+        %td Fruits & Vegetables Inc.
+        %td SUSE Fruit Company Ltd.
 
-:javascript
-  $('#my-datatable').DataTable({
-    responsive: true
-  });
+= content_for :ready_function do
+  initializeDataTable('#my-datatable');
