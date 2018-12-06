@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Modal Confirm
+title:  Modal
 category: molecules
 description: To replace data-confirm dialogs and use our styled modal ones use this component. This is typically used for **link_to** that send (sometimes via Ajax) actions 
              to the server that are destroying some data.
@@ -8,15 +8,16 @@ description: To replace data-confirm dialogs and use our styled modal ones use t
 
 %h5 Trigger element
 
-%a{ href: "#", data: { toggle: "modal", target: "#confirm-modal-1234" }, title: "Delete a thing" }
+//= link_to('#', data: { toggle: 'modal', target: '#confirm-modal' }, title: 'Delete a thing') do
+%a{ href: '#', data: { toggle: 'modal', target: '#confirm-modal' }, title: 'Delete a thing' }
     %i.fas.fa-times-circle.text-danger
     Delete
 
-.modal.fade{ id: "confirm-modal-1234", tabindex: -1, role: 'dialog', aria: { labelledby: 'confirm-modal-label', hidden: true } }
+.modal.fade#confirm-modal{ tabindex: -1, role: 'dialog', aria: { labelledby: 'confirm-modal-label', hidden: true } }
     .modal-dialog.modal-dialog-centered{ role: 'document' }
         .modal-content
             .modal-header
-                %h5.modal-title
+                %h5.modal-title#confirm-modal-label
                     Do you really want to delete a thing?
             .modal-body
                 %p Please confirm that you want to delete a thing
