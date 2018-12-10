@@ -1,0 +1,17 @@
+---
+layout: post
+title: Dropdown with checkbox
+category: molecules
+description: We use dropdown with checkboxes in it to create more complex filters e.g. on the project monitor page.
+---
+%div
+  %span.dropdown
+  %button.btn.btn-outline-secondary.dropdown-toggle{ data: { toggle: :dropdown }, type: :button }
+    %span.caret
+    Dropdown
+  .dropdown-menu
+    .custom-control.custom-checkbox.dropdown-item.ml-2
+      %input.custom-control-input#checkbox{ checked: true, type: :checkbox }
+      %label.custom-control-label{ for: 'checkbox' }
+        Checkbox
+
