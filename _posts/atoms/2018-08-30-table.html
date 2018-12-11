@@ -5,6 +5,7 @@ category: atoms
 description: A `%div` container with the CSS class `.table-responsive` makes the table responsive. The width of columns can be adjusted by using the
              [Bootstrap's sizing classes](https://getbootstrap.com/docs/4.1/utilities/sizing/) on the `%th` tags
              ([Bootstrap's grid system](https://getbootstrap.com/docs/4.1/layout/grid/) doesn't work for tables in Chrome).
+             When defining the width of a column, it's important to define the width of the other columns too as they will otherwise be squeezed to a ~%1 width.
              Additionally, we are using [DataTable](https://datatables.net/examples/styling/bootstrap4)'s [responsive](https://datatables.net/extensions/responsive/)
              and style them with striped rows (`.table-striped`) and borders (`.table-bordered`). However, you can use tables with and without datatables.
 ---
@@ -17,7 +18,7 @@ description: A `%div` container with the CSS class `.table-responsive` makes the
       %tr
         %th.w-25 Narrow
         %th.w-50 Wide
-        %th Other
+        %th.w-25 Other
     %tbody
       %tr
         %td Oranges
