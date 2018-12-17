@@ -3,18 +3,28 @@ layout: post
 title:  "Breadcrumbs"
 category: molecules
 description: Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+             OBS breadcrumbs start with a 'home' icon that links to the main page.
 ---
 
 %nav{"aria-label" => "breadcrumb"}
   %ol.breadcrumb
-    %li.breadcrumb-item.active{"aria-current" => "page"} Home
+    %li
+      -# link_to(root_path, title: home_title) do
+      %a{:href => "#", title: "Open Build Service"}
+        %i.fas.fa-home.mr-2
 %nav{"aria-label" => "breadcrumb"}
   %ol.breadcrumb
+    %li
+      %a{:href => "#", title: "Open Build Service"}
+        %i.fas.fa-home.mr-2
     %li.breadcrumb-item
       %a{:href => "#"} Home
     %li.breadcrumb-item.active{"aria-current" => "page"} Library
 %nav{"aria-label" => "breadcrumb"}
   %ol.breadcrumb
+    %li
+      %a{:href => "#", title: "Open Build Service"}
+        %i.fas.fa-home.mr-2
     %li.breadcrumb-item
       %a{:href => "#"} Home
     %li.breadcrumb-item
