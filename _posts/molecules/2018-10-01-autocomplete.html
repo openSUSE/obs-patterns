@@ -3,35 +3,21 @@ layout: post
 title:  Autocomplete
 category: molecules
 description: Whenever a field has the ability to autocomplete its value, we should add a hint in form of placeholder and 
-             also an icon on the left that shows a spinner while loading from remote
+             also an icon on the left that shows a spinner while loading from remote.
+             OBS provides an autocomplete partial, including JavaScript for handling the autocomplete request and spinner. For
+             further customization of autocomplete events, please refer to the [jQuery autocomplete documentation](https://jqueryui.com/autocomplete/).
 ---
 
 %h5 Input with autocompletion
 
-.form-group#form-group-id
-    %label{ for: 'input-id' }
-        Label:
-    .input-group
-        .input-group-prepend
-            %span.input-group-text#search-icon-id
-                %i.fa.fa-search
-                %i.fas.fa-spinner.fa-spin.d-none
-        %input.form-control#input-id{ type: 'text', placeholder: 'Type to autocomplete...' }
-
-:javascript
-    $('#input_id').autocomplete({
-        appendTo: '#form-group-id',
-        source: 'http://localhost?url_to_remote',
-        search: function(event, ui) {
-            var icon = $('#search-icon-id i:first-child');
-            icon.addClass('d-none');
-            icon.next().removeClass('d-none');
-        },
-        response: function(event, ui) {
-            var icon = $('#search-icon-id i:first-child');
-            icon.removeClass('d-none');
-            icon.next().addClass('d-none');
-        },
-        minLength: 2
-    });
-      
+// Below is the content of the autocomplete partial. Render it in your view, e.g.
+// "render partial: 'webui/autocomplete', locals: { html_id: 'linked_project', label: 'Original project name', source: autocomplete_projects_path }"
+.form-group.ui-front
+  %label{ for: 'input-id' }
+    Label:
+  .input-group
+    .input-group-prepend
+      %span.input-group-text
+        %i.fas.fa-search
+    %input.form-control.obs-autocomplete#input-id{ data: { source: '/path/to/autocomplete/data' },
+                                                           type: 'text', placeholder: 'Type to autocomplete...' }
