@@ -1,0 +1,45 @@
+---
+layout: post
+title:  Collapse
+category: molecules
+description: Toggle the visibility of content with a link.
+             This is useful to group information by context or to only show a subset of information whenever the complete set is simply too large.
+---
+
+%h5 Collapsed by default
+
+%a
+  %span.badge element1
+%a
+  %span.badge element2
+%a
+  %span.badge element3
+%a.collapsed{ aria: { controls: "collapse-1", expanded: "false" }, "data-toggle" => "collapse", href: ".collapse-1", role: "button" }
+  %span.collapser See less elements
+  %span.expander See more elements
+.collapse-1.collapse
+  %a
+    %span.badge element4
+  %a
+    %span.badge element5
+  %a
+    %span.badge element6
+
+%h5 Expanded by default
+
+%a
+  %span.badge element1
+%a
+  %span.badge element2
+%a
+  %span.badge element3
+%a{ aria: { controls: "collapse-2", expanded: "true" }, "data-toggle" => "collapse", href: ".collapse-2", role: "button" }
+  %span.collapser See less elements
+  %span.expander See more elements
+.collapse-2.collapse.show
+  %a
+    %span.badge element4
+  %a
+    %span.badge element5
+  %a
+    %span.badge element6
