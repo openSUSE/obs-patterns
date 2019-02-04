@@ -4,9 +4,10 @@ title:  Tabs
 category: atoms
 description: The tabs need a container (which is a **%div** in the example). Javascript code in OBS makes the tabs responsive.
              Mark the active tab depending on the current page with the CSS class `active`.
+             The tabs will collapse in a dropdown when there isn't enough space to display them. We fake it here by forcing the tabs container to occupy only 25% of the available space.
 ---
 
-%div
+%div.w-25
   %ul.nav.nav-tabs.pt-2.px-3.flex-nowrap.collapsible{ 'role': 'tablist' }
     %li.nav-item
       %a.nav-link.text-nowrap.active{ href: '#' }
@@ -17,8 +18,18 @@ description: The tabs need a container (which is a **%div** in the example). Jav
     %li.nav-item
       %a.nav-link.text-nowrap{ href: '#' }
         Tab 3
+    %li.nav-item
+      %a.nav-link.text-nowrap{ href: '#' }
+        Tab 4
+    %li.nav-item
+      %a.nav-link.text-nowrap{ href: '#' }
+        Tab 5
+    %li.nav-item
+      %a.nav-link.text-nowrap{ href: '#' }
+        Tab 6
+    %li.nav-item
+      %a.nav-link.text-nowrap{ href: '#' }
+        Tab 7
     %li.nav-item.dropdown
       %a.nav-link.dropdown-toggle{ href: '#', 'data-toggle': 'dropdown', 'role': 'button', 'aria-expanded': 'false', 'aria-haspopup': 'true' }
       .dropdown-menu.dropdown-menu-right
-        %a.dropdown-item.text-nowrap{ href: '#' }
-          Tab 4
