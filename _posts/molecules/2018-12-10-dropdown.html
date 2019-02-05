@@ -10,8 +10,8 @@ description: We use dropdown with checkboxes in it to create more complex filter
     %span.caret
     Dropdown
   .dropdown-menu
-    .custom-control.custom-checkbox.dropdown-item.ml-2
-      %input.custom-control-input#checkbox{ checked: true, type: :checkbox }
-      %label.custom-control-label{ for: 'checkbox' }
-        Checkbox
-
+    .dropdown-item
+      .custom-control.custom-checkbox
+        %input.custom-control-input#checkbox{ checked: true, type: :checkbox }
+        %label.custom-control-label{ for: 'checkbox' }
+          Checkbox
