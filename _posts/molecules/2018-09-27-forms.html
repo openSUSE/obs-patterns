@@ -11,11 +11,13 @@ description: We are using Bootstrap's [forms](https://getbootstrap.com/docs/4.1/
 %form
   .form-group
     %label{for: "exampleInputEmail1"} Email address
-    %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", placeholder: "Enter email", type: "email"}
+    %abbr.text-danger{ title: 'required' } *
+    %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", placeholder: "Enter email", type: "email", required: true}
     %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
   .form-group
     %label{for: "exampleInputPassword1"} Password
-    %input#exampleInputPassword1.form-control{placeholder: "Password", type: "password"}
+    %abbr.text-danger{ title: 'required' } *
+    %input#exampleInputPassword1.form-control{placeholder: "Password", type: "password", required: true}
   .form-group.custom-control.custom-checkbox
     %input.custom-control-input#exampleCheck1{type: "checkbox"}
     %label.custom-control-label{for: "exampleCheck1"} Check me out
