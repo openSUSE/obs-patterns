@@ -6,38 +6,44 @@ description: We are using Bootstrap's [forms](https://getbootstrap.com/docs/4.1/
              and [custom form controls](http://getbootstrap.com/docs/4.1/components/forms/#custom-forms) for cross browser consistency.
 ---
 
-%h5 Forms
+.container
+  .card.mb-3
+    .card-body
+      %h5 Simple Form
 
-%form
-  .form-group
-    %label{ for: 'exampleInputEmail1' } Email address
-    %abbr.text-danger{ title: 'required' } *
-    %input#exampleInputEmail1.form-control{ 'aria-describedby' => 'emailHelp', placeholder: 'Enter email', type: 'email', required: true }
-    %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
-  .form-group
-    %label{ for: 'exampleInputPassword1' } Password
-    %abbr.text-danger{ title: 'required' } *
-    %input#exampleInputPassword1.form-control{ placeholder: 'Password', type: 'password', required: true }
-  .form-group.custom-control.custom-checkbox
-    %input.custom-control-input#exampleCheck1{ type: 'checkbox' }
-    %label.custom-control-label{ for: 'exampleCheck1' } Check me out
-  %button.btn.btn-primary{ type: 'submit' } Submit
+      %form
+        .form-group
+          %label{ for: 'exampleInputEmail1' } Email address
+          %abbr.text-danger{ title: 'required' } *
+          %input#exampleInputEmail1.form-control{ 'aria-describedby' => 'emailHelp', placeholder: 'Enter email', type: 'email', required: true }
+          %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+        .form-group
+          %label{ for: 'exampleInputPassword1' } Password
+          %abbr.text-danger{ title: 'required' } *
+          %input#exampleInputPassword1.form-control{ placeholder: 'Password', type: 'password', required: true }
+        .form-group.custom-control.custom-checkbox
+          %input.custom-control-input#exampleCheck1{ type: 'checkbox' }
+          %label.custom-control-label{ for: 'exampleCheck1' } Check me out
+        %button.btn.btn-primary{ type: 'submit' } Submit
 
-%h5 Custom Form Controls
+  .card
+    .card-body
 
-%i Note: There is no custom form control for text field
+      %h5 Custom Form Controls
 
-.custom-control.custom-checkbox
-  %input.custom-control-input#my-checkbox{ type: 'checkbox' }
-  %label.custom-control-label{ for: 'my-checkbox' } I am a checkbox
-.custom-control.custom-radio
-  %input.custom-control-input#my-radio{ type: 'radio' }
-  %label.custom-control-label{ for: 'my-radio' } I am a radio element
-%select.custom-select#my-select
-  %option{ selected: 'selected' } Open this select menu
-  %option{ value: '1' } One
-  %option{ value: '2' } Two
-  %option{ value: '3' } Three
-.custom-file
-  %input.custom-file-input#my-file{ type: 'file' }
-  %label.custom-file-label{ for: 'customFile' } Choose file
+      %i Note: There is no custom form control for text field
+
+      .custom-control.custom-checkbox
+        %input.custom-control-input#my-checkbox{ type: 'checkbox' }
+        %label.custom-control-label{ for: 'my-checkbox' } I am a checkbox
+      .custom-control.custom-radio
+        %input.custom-control-input#my-radio{ type: 'radio' }
+        %label.custom-control-label{ for: 'my-radio' } I am a radio element
+      %select.custom-select#my-select
+        %option{ selected: 'selected' } Open this select menu
+        %option{ value: '1' } One
+        %option{ value: '2' } Two
+        %option{ value: '3' } Three
+      .custom-file
+        %input.custom-file-input#my-file{ type: 'file' }
+        %label.custom-file-label{ for: 'customFile' } Choose file
