@@ -1,0 +1,19 @@
+---
+layout: post
+title: Collapsible text
+category: molecules
+description: Use the 'collapsible_text' partial when you want to show a subset of text
+             by default and allow users to collapse it via a 'Show more' link.
+---
+
+// = render partial: 'webui/webui/collapsible_text', locals: { text: 'Text goes here', threshold: 100 }
+- text = "This\n\n Text\n\n is\n\n very\n\n long"
+- threshold = 1
+.obs-collapsible-textbox
+  - if text.length > threshold
+    .obs-collapsible-text.obs-collapsed
+      %p.m-0.p-0
+        = text
+    %a.obs-collapsible-link.obs-collapsed.text-center.d-block{ title: 'Show more' }
+  - else
+    = simple_format(text, class: 'm-0 p-0')
