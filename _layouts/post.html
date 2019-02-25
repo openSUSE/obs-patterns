@@ -5,10 +5,14 @@ layout: default
 
 <p class="lead">{{ page.description | markdownify | smartify }}</p>
 
+<hr>
+
 <h2>Example</h2>
 <div class="example">
   {{ content | render_haml | markdownify }}
 </div>
+
+<hr>
 
 <h2>Code</h2>
 
