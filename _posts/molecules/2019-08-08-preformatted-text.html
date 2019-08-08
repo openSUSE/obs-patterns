@@ -1,0 +1,19 @@
+---
+layout: post
+title: Preformatted text
+category: molecules
+description: Some elements like the code editor or the log output for Rpmlint show preformatted text. Those elements contain a pre HTML tag, and
+  Bootstrap sets a monospace font stack for them. However,  we decided to fix their size to 0.95rem to prevent they look bigger than the rest on the
+  texts.
+---
+
+%h5 Log output
+
+:css
+  pre { font-size: .95rem }
+
+%pre
+  :preserve
+    This is    the log output
+      with a          preformatted
+            text.
