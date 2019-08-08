@@ -1,0 +1,13 @@
+---
+layout: post
+title: Context-Sensitive Help
+category: molecules
+description: We use [Bootstrap tooltips](https://getbootstrap.com/docs/4.3/components/tooltips/) to provide context-sensitive help to users.
+---
+
+%button.btn.btn-primary{ type: 'button' } Save
+%i.fa.fa-question-circle.text-info{ data: { placement: 'top', toggle: 'popover', content: "Everything is saved in the cloud because it's the future. Clouds everywhere!" } }
+
+%h5
+  Status
+  %i.fa.fa-question-circle.text-info{ data: { placement: 'top', toggle: 'popover', html: 'true', content: 'This status is to tell you that everything is <b>fine</b>!' } }
