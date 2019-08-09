@@ -2,9 +2,10 @@
 layout: post
 title: Typography
 category: atoms
-description: After some research, we decided to stick with the [Native font stack](https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack) as we want to rely on system fonts.  
+description: After some research, we decided to stick with the [Native font stack](https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack) as we want to rely on system fonts.
              We use the [default fonts from Bootstrap](https://getbootstrap.com/docs/4.1/content/reboot/#native-font-stack) with the default font-size of `16px`.
              We use Bootstrap [typography](https://getbootstrap.com/docs/4.1/content/typography/) and [text](https://getbootstrap.com/docs/4.1/utilities/text/) classes when needed.
+             We also use the monospace font stack provided by Bootstrap for preformatted text (pre HTML tag) or elements with class .text-monospace.
 ---
 
 
@@ -40,8 +41,6 @@ description: After some research, we decided to stick with the [Native font stac
   %span.small smaller
   word with .small
 
-%p.text-monospace This is in monospace
-
 %p.text-lowercase THIS IS IN LOWERCASE
 
 %p.text-uppercase this is in uppercase
@@ -61,3 +60,7 @@ description: After some research, we decided to stick with the [Native font stac
 %p.text-center Regular paragraph center aligned with .text-center on all viewport sizes
 
 %p.text-right Regular paragraph right aligned with .text-right on all viewport sizes
+
+%p.text-monospace This is in monospace
+
+%pre This is a preformatted text
