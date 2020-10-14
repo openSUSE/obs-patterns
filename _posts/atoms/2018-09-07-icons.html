@@ -8,13 +8,171 @@ description: We are using [FontAwesome icons](https://fontawesome.com/icons) wit
              and [more](https://fontawesome.com/how-to-use/on-the-web/styling/).
 ---
 
-`Add`:
-%i.fas.fa-plus-circle.text-primary
-Add
-\/
-%i.fas.fa-plus-circle.text-primary{ title: 'Add' }
-*(inline, e.g. in a table)*
+%h3 Icon Modifiers
+
+Rotate with `fa-spin`:
+%i.fas.fa-sync-alt.fa-spin
 %br
+
+Rotate on click with `fa-spin`:
+%i.fas.fa-sync-alt.rotate-on-click
+:javascript
+  // Example to show how this can be achieved
+  $('i.rotate-on-click').click(function() {
+    element = $(this);
+    element.addClass('fa-spin');
+    // Sleep for 1.5 second... this would be your AJAX call or whatever needs to be done in the refresh
+    setTimeout(function() {
+      element.removeClass('fa-spin');
+    }, 1500);
+  });
+
+%h5 Colors
+
+%p
+  Some icons have a predefined color to better convey information. For example, icons used in the context
+  of a destructive action, which could have severe consequences, are displayed in red to express danger.
+
+%p
+  For icons which don't have a predefined color on this page, use
+  %a{ href: 'colors.html' } colors
+  to convey information based on the context.
+
+%p
+  On dark backgrounds, we revert to white for all icons, even if they have a predefined color.
+
+%h5 Sizes
+
+%p
+  We only use a subset of the
+  %a{ href: 'https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons' }icon sizes provided by FontAwesome
+
+%i.fas.fa-headphones.fa-xs
+%i.fas.fa-headphones.fa-sm
+%i.fas.fa-headphones
+%i.fas.fa-headphones.fa-lg
+%i.fas.fa-headphones.fa-2x
+%i.fas.fa-headphones.fa-3x
+
+%h3 Places
+
+%p These icons are for the `Places` links displayed in the left navigation sidebar.
+
+`All Projects`:
+%i.fas.fa-list
+%br
+
+`Configuration`:
+%i.fas.fa-cogs
+%br
+
+`Status Monitor`:
+%i.fas.fa-heartbeat
+%br
+
+`Tasks`:
+%i.fas.fa-tasks
+%br
+
+`Your Home Project`:
+%i.fas.fa-cubes
+
+%h3 Actions
+
+%p
+  These icons are for generic actions like `Create` or `Delete`.
+  They aren't limited to the `Actions` links in the left navigation sidebar, they are used in various contexts of the application.
+
+`Branch`:
+%i.fas.fa-code-branch
+Branch
+%br
+
+`Browse`:
+%i.fas.fa-folder-open
+Browse
+%br
+
+`Change`
+%i.fas.fa-exchange-alt
+Change
+%br
+
+`Copy`:
+%i.fas.fa-clone
+Copy
+%br
+
+`Create`:
+%i.fas.fa-plus-circle
+Create
+%br
+
+`Delete`:
+%i.fas.fa-times-circle.text-danger
+Delete
+%br
+
+`Disable`:
+%i.fas.fa-toggle-off.text-dark
+Disable
+%br
+
+`Download`:
+%i.fas.fa-download
+Download
+%br
+
+`Edit`:
+%i.fas.fa-edit
+Edit
+%br
+
+`Enable`:
+%i.fas.fa-toggle-on.text-primary
+Enable
+%br
+
+`Refresh`:
+%i.fas.fa-sync-alt
+Refresh
+%br
+
+`Repeat`:
+%i.fas.fa-redo
+Repeat
+%br
+
+`Search`:
+%i.fas.fa-search
+Search
+%br
+
+`Show`:
+%span.fa-stack.half-font-size
+  %i.far.fa-file.fa-stack-2x
+  %i.fas.fa-search.fa-stack-1x
+Show
+%br
+
+`Submit`:
+%i.fas.fa-share-square
+Submit
+%br
+
+`Trigger`:
+%i.fas.fa-project-diagram
+Trigger
+%br
+
+`Upload`:
+%i.fas.fa-upload
+Upload
+%br
+
+%h3 Others
+
+%p The following icons have to be categorized.
 
 `Announcement`:
 %i.fa.fa-exclamation-circle.text-danger{ title: 'Alert' }
@@ -24,16 +182,6 @@ Add
 %i.fa.fa-check-circle.text-success{ title: 'Success' }
 \/
 %i.fa.fa-info-circle.text-info{ title: 'Info' }
-%br
-
-`Branch`:
-%i.fas.fa-code-branch.text-primary
-Branch package
-%br
-
-`Browse`:
-%i.fas.fa-folder-open.text-warning
-Browse source
 %br
 
 `Bug`:
@@ -69,28 +217,6 @@ Cloud Download
 Cloud Upload
 %br
 
-`Configuration`:
-%i.fas.fa-cogs
-Configuration
-%br
-
-`Copy`:
-%i.fas.fa-clone
-Copy
-%br
-
-`Delete`:
-%i.fas.fa-times-circle.text-danger
-Delete
-\/
-%i.fas.fa-times-circle.text-danger{ title: 'Delete' }
-*(inline, e.g. in a table)*
-%br
-
-`Disable`:
-%i.fas.fa-toggle-off{ title: 'Disable' }
-%br
-
 `Direction`:
 %i.fas.fa-chevron-down
 \/
@@ -101,28 +227,8 @@ Delete
 %i.fas.fa-chevron-up
 %br
 
-`Download`:
-%i.fas.fa-download.text-secondary
-Download
-\/
-%i.fas.fa-download.text-secondary{ title: 'Download' }
-*(inline, e.g. in a table)*
-%br
-
-`Edit`:
-%i.fas.fa-edit.text-secondary
-Edit
-\/
-%i.fas.fa-edit.text-secondary{ title: 'Edit' }
-*(inline, e.g. in a table)*
-%br
-
 `Email`:
 %i.far.fa-envelope{ title: 'Send email to blabla' }
-%br
-
-`Enable`:
-%i.fas.fa-toggle-on{ title: 'Enable' }
 %br
 
 `Files`:
@@ -148,10 +254,6 @@ Links to project123
 %i.fas.fa-list{ title: 'List projects' }
 %br
 
-`Monitor`:
-%i.fas.fa-heartbeat.text-danger{ title: 'Monitor' }
-%br
-
 `Package`:
 %i.fa.fa-archive.text-warning
 My package 123
@@ -162,39 +264,8 @@ My package 123
 My project 123
 %br
 
-`Refresh`:
-%i.fas.fa-sync-alt.rotate-on-click{ title: 'Refresh' }
-*(rotates on click)*
-:javascript
-  // Example to show how this can be achieved
-  $('i.rotate-on-click').click(function() {
-    element = $(this);
-    element.addClass('fa-spin');
-    // Sleep for 1.5 second... this would be your AJAX call or whatever needs to be done in the refresh
-    setTimeout(function() {
-      element.removeClass('fa-spin');
-    }, 1500);
-  });
-%br
-
-`Repeat`:
-%i.fas.fa-redo
-Trigger Rebuild
-*(indicates that an action was already done, but can be repeated)*
-%br
-
 `RSS Feed`:
 %i.fa.fa-rss
-%br
-
-`Search`:
-%i.fas.fa-search
-%br
-
-`Show`:
-%span.fa-stack.half-font-size{ title: 'Show' }
-  %i.far.fa-file.fa-stack-2x
-  %i.fas.fa-search.fa-stack-1x
 %br
 
 `Spinner`:
@@ -216,14 +287,4 @@ Trigger Rebuild
 \/
 %i.fas.fa-spinner.fa-spin
 *(Visually indicate that the WebUI is waiting for an update from the backend)*
-%br
-
-`Submit`:
-%i.fas.fa-share-square.text-warning
-Submit package
-%br
-
-`Upload`:
-%i.fas.fa-upload.text-secondary
-Upload
 %br
